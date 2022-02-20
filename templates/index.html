@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/glow.css') }}">
+  </head>
+  <body>
+    <div class="bg-animated" include-html="/back"></div>
+    <div class="container hero">
+      <div
+        class="accident"
+        data-tilt
+        data-tilt-max="3"
+        data-tilt-speed="400"
+        data-tilt-perspective="500"
+        data-tilt-reverse="true"
+        data-tilt-scale="1.04"
+      >
+        <!-- https://www.ginjurylaw.com/wp-content/uploads/2020/05/Car-Accidents-Banner.jpg -->
+        <h1 class="accident-title">
+          With cases of Mental Health issues rising day by day today with no respite in site....
+        </h1>
+        <img class="accident-image" src="{{ url_for('static',filename='temp/m1.jpg') }}" alt="" />
+        <h1 class="accident-goal">We have worked for everyone experiencing such issues by creating a personal healthcare companion to help them.</h1>
+      </div>
+      <div class="title-container noDisplay">
+        <div class="title"><h1>Health-E</h1></div>
+        <div class="tagline"><h3>Helping you remain fit both physically and mentally.</h3></div>
+      </div>
+    </div>
+    <div class="next">
+      <div class="next--title">
+        We are calling it
+        <a
+          href="https://translate.google.co.in/?sl=fr&tl=en&text=se%20remettre&op=translate"
+          class="sahayak"
+          >Health-E</a
+        >.
+      </div>
+      <button class="next--button">Proceed</button>
+    </div>
+
+    <div class="container content">
+      <img src="{{ url_for('static',filename='temp/m5.jpg') }}" alt="" />
+    </div>
+    <div class="container content">
+      <img src="{{ url_for('static',filename='temp/m3.png') }}" alt="" />
+    </div>
+
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <script src="{{ url_for('static',filename='js/main-button.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/vanilla-tilt.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bg.js') }}"></script>
+  </body>
+</html>

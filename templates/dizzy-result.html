@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}" />
+  </head>
+  <body>
+    <!-- <div class="bg-animated" include-html="/back"></div> -->
+    <div class="result-container">
+      <div class="score-container" data-level="warning">
+        <!-- {{value}} -->
+        <h1 class="score">{{ value }}</h1>
+        <h4 class="ms">Reps</h4>
+      </div>
+      <div class="result-text">
+        <h4>Result</h4>
+        <h2 class="result">You can do better</h2>
+        <div class="result-actions">
+          <button class="button" data-level="">Proceed</button>
+          <button class="button" data-level="muted" startDrive>
+            Go Back
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static',filename='js/result-text.js') }}"></script>
+    <div class="instruction caution">
+      <h4>
+        The score has been calculated only based on the latest exercise. Please take
+        caution and don't overexert yourself.
+      </h4>
+    </div>
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <script src="{{ url_for('static',filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bg.js') }}"></script>
+  </body>
+</html>

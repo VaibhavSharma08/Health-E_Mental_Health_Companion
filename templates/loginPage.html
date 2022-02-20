@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.css"/> -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/cursor.css') }}">
+    <link rel="shortcut icon" href="#">
+    <title>Input Form</title>
+  </head>
+
+  <body>
+    <div class="bg-animated" include-html="/back"></div>
+    <div class="signupSection">
+      <div class="info">
+        <h2>Created to be your Instructor, Companion and Well-Wisher.</h2>
+        <!-- <i class="icon ion-ios-ionic-outline" aria-hidden="true"></i> -->
+
+        <p></p>
+        
+      </div>
+
+      <form method="get" class="signupForm" name="signupform">
+        <h2>Enter Credentials</h2>
+        <ul class="noBullet">
+          <li>
+            <input
+              type="text"
+              class="inputFields"
+              id="username"
+              name="Name"
+              placeholder="Enter username"
+            />
+          </li>
+
+          <li>
+            <input
+              type="password"
+              class="inputFields"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+            />
+          </li>
+          <li id="center-btn">
+            <input type="submit" class="a2" id="join-btn" value="Login" />
+          </li>
+        </ul>
+      </form>
+    </div>
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <script src="{{ url_for('static',filename='js/cursor.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bg.js') }}"></script>
+    <script>
+      gsap.to(document.querySelector(".signupSection"), {
+        duration: 0.75,
+        opacity: 1,
+      });
+
+      document
+        .getElementById("join-btn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.location.href = "/dizzy";
+        });
+      includeHTML()
+    </script>
+  </body>
+</html>
