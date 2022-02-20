@@ -1,5 +1,5 @@
 ## How to Run
-After downloading all files, run the command "pip install -r requirements.txt". Go to the folder named "Server ...." and enter command "npm run server". Now run "python app.py".
+After downloading all files, run the command "pip install -r requirements.txt". Go to the folder named "Server for transcription" and enter command "npm run server". Now run "python app.py" in another terminal.
 
 
 ## Inspiration
